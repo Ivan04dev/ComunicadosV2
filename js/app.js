@@ -1,4 +1,16 @@
 // Vanilla JS 
+const contenedorArchivos = document.querySelector('#archivos');
+const botonArchivo = document.querySelector('#botonArchivo');
+
+botonArchivo.addEventListener('click', agregarArchivo);
+
+function agregarArchivo(){
+    // <input type="file" name="archivo" id="archivo"></input>
+    const inputArchivo = document.createElement('input');
+    inputArchivo.type = 'file';
+    contenedorArchivos.appendChild(inputArchivo);
+}
+
 let valoresSeleccionados = [];
 function handleCheckboxChange(checkbox) {
     if (checkbox.checked) {
